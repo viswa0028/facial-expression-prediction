@@ -50,14 +50,14 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.5], std=[0.5])   # Normalize pixel values to [-1, 1]
 ])
 
-train_dataset = datasets.ImageFolder(root="FER 2013 Archive/train", transform=transform)
+train_dataset = datasets.ImageFolder(root="TRAIN DATASET PATH", transform=transform)
 transform1 = transforms.Compose([
     transforms.Grayscale(num_output_channels=1),
     transforms.Resize((48,48)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5],std = [0.5])
 ])
-test_dataset  = datasets.ImageFolder(root="FER 2013 Archive/test",transform=transform1)
+test_dataset  = datasets.ImageFolder(root="TEST DATASET PATH",transform=transform1)
 from torch.utils.data import DataLoader
 
 # Define batch size
