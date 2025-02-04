@@ -36,7 +36,7 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.5],std=[0.5])
 ]
 )
-image = Image.open('myself.png').convert('RGB')
+image = Image.open('YOUR IMAGE PATH').convert('RGB')
 image = transform(image).unsqueeze(0).to(device)  
 
 # Make prediction
